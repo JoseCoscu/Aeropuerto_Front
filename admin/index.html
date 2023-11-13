@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminPage</title>
+    <link rel="stylesheet" href="./login/css/styles.css">
+</head>
+<body>
+    <!-- Panel con botones -->
+    <div class="panel" id="panel">
+        <button class="boton">Servicios</button>
+        <button class="boton">Reparaciones</button>
+        <button class="boton">Clientes</button>
+        <button class="boton">Vuelos</button>
+
+    </div>
+
+    <!-- Pestaña para mostrar/ocultar el panel -->
+    <div class="pestana" id="pestana">☰</div>
+
+    <!-- Contenido principal: Tabla con registros y botones -->
+    <table>
+        <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </tr>
+        <tr>
+            <td>Valor 1A</td>
+            <td>Valor 1B</td>
+        </tr>
+        <tr>
+            <td>Valor 2A</td>
+            <td>Valor 2B</td>
+        </tr>
+        <!-- Agregar más registros según sea necesario -->
+
+        <!-- Botones al final de la tabla -->
+        <tr>
+            <td colspan="2">
+                <button class="botonTabla">Crear Nuevo Registro</button>
+                <button class="botonTabla">Editar Registro</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- JavaScript para controlar la visibilidad del panel -->
+    <script>
+        const panel = document.getElementById('panel');
+        const pestana = document.getElementById('pestana');
+
+        pestana.addEventListener('click', () => {
+            if (panel.style.left === '-180px') {
+                panel.style.left = '0';
+            } else {
+                panel.style.left = '-180px';
+            }
+        });
+    </script>
+</body>
+</html>
