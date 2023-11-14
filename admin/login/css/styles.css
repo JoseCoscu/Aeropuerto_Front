@@ -1,6 +1,12 @@
  /* Estilos para el panel y los botones */
+ body{
+  background-image: url('../images/background.jpg');
+  background-size: 1400px 800px;
+  background-repeat: no-repeat;
+}
+
  .panel {
-  background-color: #f4f4f4;
+  background-color: #f4f4f46e;
   width: 200px;
   height: 100%;
   position: fixed;
@@ -16,15 +22,15 @@
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #4caf4fc8;
+  color: rgba(255, 255, 255, 0.767);
   text-decoration: none;
   border: none;
   cursor: pointer;
 }
 
 .boton:hover {
-  background-color: #45a049;
+  background-color: #45a049d1;
 }
 
 .pestana {
@@ -32,8 +38,8 @@
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #4CAF50;
-  color: white;
+  background-color: #4caf4fcc;
+  color: rgba(255, 255, 255, 0.76);
   padding: 10px 20px;
   cursor: pointer;
   border-top-right-radius: 4px;
@@ -49,13 +55,13 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #ddddddc7;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2cf;
 }
 
 .botonTabla {
@@ -63,13 +69,13 @@ th {
   margin: 10px 0;
   padding: 10px;
   text-align: center;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #4caf4fd1;
+  color: rgba(255, 255, 255, 0.764);
   text-decoration: none;
   border: none;
   cursor: pointer;
 }
 
 .botonTabla:hover {
-  background-color: #45a049;
+  background-color: #45a049c8;
 }
