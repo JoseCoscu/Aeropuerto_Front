@@ -22,5 +22,5 @@ document.getElementById('flys').onclick = function(){
 };
 
 document.getElementById('clients').onclick = function(){
-    window.location.href = 'clientes.html';
+    window.location.href = '../admin/clients/index.html';
 };
