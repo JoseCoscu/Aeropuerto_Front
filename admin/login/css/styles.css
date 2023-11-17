@@ -55,18 +55,19 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddddddc7;
+  border: 1px solid #6bbd13c7;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2cf;
+  background-color: #4caf4fd1
 }
 
 .botonTabla {
+  
   display: block;
-  margin: 10px 0;
+  margin: 10px 10px;
   padding: 10px;
   text-align: center;
   background-color: #4caf4fd1;

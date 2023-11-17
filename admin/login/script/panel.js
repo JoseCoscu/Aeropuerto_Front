@@ -10,17 +10,17 @@ pestana.addEventListener('click', () => {
 });
 
 document.getElementById('services').onclick = function(){
-    window.location.href = 'services.html';
+    window.location.href = '../servicios/index.html';
 };
 
 document.getElementById('reparations').onclick = function(){
-    window.location.href = 'reparaciones.html';
+    window.location.href = '../reparaciones/index.html';
 };
 
 document.getElementById('flys').onclick = function(){
-    window.location.href = 'vuelos.html';
+    window.location.href = '../vuelos/index.html';
 };
 
 document.getElementById('clients').onclick = function(){
-    window.location.href = '../admin/clients/index.html';
+    window.location.href = '../clients/index.html';
 };
