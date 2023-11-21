@@ -1,11 +1,11 @@
  /* Estilos para el panel y los botones */
- body{
-  background-image: url('../images/background.jpg');
-  background-size: 1400px 800px;
-  background-repeat: no-repeat;
-}
+ body {  
+  background-image: url('../images/main_image.png');
+  background-size:  contain 100% 100%;
+  background-repeat: repeat;
 
- .panel {
+} 
+.panel {
   background-color: #f4f4f46e;
   width: 200px;
   height: 100%;
@@ -30,7 +30,7 @@
 }
 
 .boton:hover {
-  background-color: #45a049d1;
+  background-color: #1d6a21d1;
 }
 
 .pestana {
@@ -52,12 +52,14 @@ table {
   margin-left: 200px;
   margin-top: 20px;
   border-collapse: collapse;
+  color: rgba(255, 255, 255, 0.76);
 }
 
 th, td {
   border: 1px solid #6bbd13c7;
   padding: 8px;
   text-align: left;
+  
 }
 
 th {
@@ -78,5 +80,5 @@ th {
 }
 
 .botonTabla:hover {
-  background-color: #45a049c8;
+  background-color: #127317c8;
 }

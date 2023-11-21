@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vuelos</title>
-    <link rel="stylesheet" href="../login/css/styles.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../login/css/styles.css" />
+  </head>
+  <body>
     <!-- Panel con botones -->
     <div class="panel" id="panel">
-        <button class="boton" id = "services">Servicios</button>
-        <button class="boton" id = "reparations">Reparaciones</button>
-        <button class="boton" id = "clients">Clientes</button>
-        <button class="boton" id = "flys">Vuelos</button>
-        <button class="boton" id="ships">Aviones</button>
+      <button class="boton" id="services">Servicios</button>
+      <button class="boton" id="reparations">Reparaciones</button>
+      <button class="boton" id="clients">Clientes</button>
+      <button class="boton" id="flys">Vuelos</button>
+      <button class="boton" id="ships">Aviones</button>
     </div>
 
     <!-- Pestaña para mostrar/ocultar el panel -->
     <div class="pestana" id="pestana">☰</div>
 
     <!-- Contenido principal: Tabla con registros y botones -->
-    <table>
+    <table id="flights_table">
+      <thead>
         <tr>
-            <th>Columna 1</th>
-            <th>Columna 2</th>
+          <th>Avion</th>
+          <th>Fecha</th>
+          <th>Aeropuerto</th>
+          <th>Fecha Salida</th>
         </tr>
-        <tr>
-            <td>Valor 1A</td>
-            <td>Valor 1B</td>
-        </tr>
-        <tr>
-            <td>Valor 2A</td>
-            <td>Valor 2B</td>
-        </tr>
-        <!-- Agregar más registros según sea necesario -->
-
-        <!-- Botones al final de la tabla -->
-        <tr>
-            <td colspan="2">
-                <button class="botonTabla">Crear Nuevo Registro</button>
-                <button class="botonTabla">Editar Registro</button>
-            </td>
-        </tr>
+      </thead>
+      <tbody></tbody>
     </table>
+    <div style="display: flex; justify-content: center">
+      <button class="botonTabla" id="create_ship">
+        Crear Nuevo Registro
+      </button>
+      <button class="botonTabla">Editar Registro</button>
+    </div>
 
     <!-- JavaScript para controlar la visibilidad del panel -->
     <script src="../login/script/panel.js"></script>
-</body>
+    <script src="./script/fetch_data.js"></script>
+  </body>
 </html>
