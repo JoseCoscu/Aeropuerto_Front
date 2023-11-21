@@ -24,3 +24,7 @@ document.getElementById('flys').onclick = function(){
 document.getElementById('clients').onclick = function(){
     window.location.href = '../clients/index.html';
 };
+
+document.getElementById('ships').onclick = function(){
+    window.location.href = '../ships/index.html';
+};
