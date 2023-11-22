@@ -8,11 +8,15 @@ window.addEventListener('DOMContentLoaded',async (event)=>{
   const rows = clients.map(client => {
     const {id, idClientType, name, username, nationality} = client 
     return `<tr>
-              <td>${id}</td>
-              <td>${idClientType}</td>
-              <td>${name}</td>
-              <td>${username}</td>
-              <td>${nationality}</td>
+              <td name = 'id'>${id}</td>
+              <td name = 'idClientType'>${idClientType}</td>
+              <td name = 'name'>${name}</td>
+              <td name = 'username'>${username}</td>
+              <td name = 'nationality'>${nationality}</td>
+              <td>
+              <button class = "boton edit_button" value = ${id}>Edit</button>
+              <button class = "boton delete_button" value =${id}>Delete</button>
+              </td>
             </tr>`
   }).join('')
   table.innerHTML = rows;

@@ -53,13 +53,14 @@ table {
   margin-top: 20px;
   border-collapse: collapse;
   color: rgba(255, 255, 255, 0.76);
+  
 }
 
 th, td {
   border: 1px solid #6bbd13c7;
   padding: 8px;
   text-align: left;
-  
+  background-color: #000400d1
 }
 
 th {
