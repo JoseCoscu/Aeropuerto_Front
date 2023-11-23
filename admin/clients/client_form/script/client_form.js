@@ -7,9 +7,10 @@ const createClient = async (client) => {
     "Content-Type": "application/json",
   },
 })
- const res = await response.json()
+ const res = await response.json
  console.log(res)
- return res.ok
+ return true
+ 
 }
   catch(err){
     console.log(err)
@@ -27,8 +28,12 @@ client_form.addEventListener("submit", async (event) => {
   const client = {name, username, nationality, idClientType,password}
 
   const response = await createClient(client)
+  
+  if (response==true){
+    window.close()
+  }
+  
   console.log(response)
 
-  
-  
-});
+})
+

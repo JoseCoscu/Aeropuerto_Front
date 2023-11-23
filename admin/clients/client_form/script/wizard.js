@@ -13,7 +13,7 @@ const getContent = async (path) => {
 // Agregar un evento de clic al botón
 botonAbrir.addEventListener("click", async function () {
   // Mostrar u ocultar el formulario al hacer clic en el botón
-  const ventanaPopup = window.open("", "", "width=700,height=500");
+  const ventanaPopup = window.open("", "Formulario Cliente", "width=700,height=500");
 
   const content = await getContent("./client_form/index.html");
 

@@ -15,7 +15,25 @@ table_clients.addEventListener('click', async (event) => {
                 if (attr !== null)
                     client_data[attr] = value
             })
-            console.log(client_data)
+            const ventanaPopup = window.open("", "Formulario Cliente", "width=700,height=500");
+            const content = await getContent("./client_form/index.html");
+            
+            const temporal = document.createElement('div');
+            temporal.innerHTML = content;
+
+            // Modificas los valores de los campos específicos
+            temporal.querySelector('#name').setAttribute('value', client_data['name']);
+            temporal.querySelector('#username').setAttribute('value', client_data['username']);
+            temporal.querySelector('#password').setAttribute('value', '1234');
+            temporal.querySelector('#nacionalidad').setAttribute('value', client_data['nationality']);
+            temporal.querySelector('#clienttype').setAttribute('value', client_data['idClientType']);
+            
+            console.log(temporal)
+            const contenidoModificado = temporal.innerHTML;
+
+            // Escribir el contenido en la nueva ventana emergente
+             ventanaPopup.document.write( contenidoModificado);
+
         }
         if(event.target.classList.contains('delete_button')){
             const id_client = button.value
