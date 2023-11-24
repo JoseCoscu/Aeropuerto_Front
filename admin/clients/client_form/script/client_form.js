@@ -38,6 +38,7 @@ client_form.addEventListener('submit', async (event) => {
   const nationality = document.querySelector('#nacionalidad').value
   const idClientType = document.querySelector('#clienttype').value
   const password = document.querySelector('#password').value
+  
   const client = { name, username, nationality, idClientType, password }
   const id_client = document.querySelector('#idClient').value
   console.log(client)

@@ -4,6 +4,7 @@ const deletClient = async (id) => {
   })
   return response.ok
 }
+
 const table_clients = document.querySelector('#clients_table')
 table_clients.addEventListener('click', async (event) => {
   if (event.target.type === 'submit') {

@@ -8,14 +8,18 @@ window.addEventListener('DOMContentLoaded',async (event)=>{
   const rows = ships.map(ship => {
     const {id, name, status, capacity,numberCrews,totalPlazas,owner,classification} = ship 
     return `<tr>
-              <td>${id}</td>
-              <td>${name}</td>
-              <td>${status}</td>
-              <td>${capacity}</td>
-              <td>${numberCrews}</td>
-              <td>${totalPlazas}</td>
-              <td>${owner}</td>
-              <td>${classification}</td>
+              <td name = 'id'>${id}</td>
+              <td name = 'name'>${name}</td>
+              <td name = 'status'>${status}</td>
+              <td name = 'capacity'>${capacity}</td>
+              <td name = 'numberCrews'>${numberCrews}</td>
+              <td name = 'totalPlazas'>${totalPlazas}</td>
+              <td name = 'owner'>${owner}</td>
+              <td name = 'classification'>${classification}</td>
+              <td>
+              <button class = "boton edit_button" value = ${id}>Edit</button>
+              <button class = "boton delete_button" value =${id}>Delete</button>
+              </td>
               </tr>`
   }).join('')
   table.innerHTML = rows;
