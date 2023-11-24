@@ -29,10 +29,9 @@ table_clients.addEventListener('click', async (event) => {
       temporal.querySelector('#password').setAttribute('value', '')
       temporal.querySelector('#nacionalidad').setAttribute('value', client_data['nationality'])
       temporal.querySelector('#clienttype').setAttribute('value', client_data['idClientType'])
-
       temporal.querySelector('#create-update').setAttribute('value', 'Edit')
-
       temporal.querySelector('#idClient').setAttribute('value', id_client)
+
       const contenidoModificado = temporal.innerHTML
 
       // Escribir el contenido en la nueva ventana emergente
@@ -41,6 +40,7 @@ table_clients.addEventListener('click', async (event) => {
     if (event.target.classList.contains('delete_button')) {
       const id_client = button.value
       const response = await deletClient(id_client)
+      location.reload()
       console.log(response)
     }
   }
