@@ -1,7 +1,8 @@
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZUlkIjoxLCJpYXQiOjE2OTg3NzM5MzAsImV4cCI6MTY5OTM3ODczMH0.MA_7LkLjbgYtBMOns8wuuvdv9qdCSFspsPuTL6L7shI";
+writeTable()
 
-
-window.addEventListener('DOMContentLoaded',async (event)=>{
+function writeTable(){
+ window.addEventListener('DOMContentLoaded',async (event)=>{
   const ships  = await get_ships()
   const table = document.querySelector("#ships_table tbody")
   
@@ -24,6 +25,13 @@ window.addEventListener('DOMContentLoaded',async (event)=>{
   }).join('')
   table.innerHTML = rows;
 
+}) 
+}
+
+
+const refresh = document.querySelector('#refresh')
+refresh.addEventListener('click', async(event)=>{
+  location.reload()
 })
 
 
