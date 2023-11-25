@@ -6,12 +6,12 @@
 
 } 
 .panel {
-  background-color: #f4f4f46e;
+  background-color: #120f0f6e;
   width: 200px;
   height: 100%;
   position: fixed;
   top: 0;
-  left: -180px; /* Ocultar el panel al principio */
+  left: -250px; /* Ocultar el panel al principio */
   transition: left 0.3s ease;
   padding: 20px;
 }
