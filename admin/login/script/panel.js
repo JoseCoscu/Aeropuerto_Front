@@ -28,3 +28,7 @@ document.getElementById('clients').onclick = function(){
 document.getElementById('ships').onclick = function(){
     window.location.href = '../ships/index.html';
 };
+
+document.getElementById('clientType').onclick = function(){
+    window.location.href = '../clientType/index.html';
+};
