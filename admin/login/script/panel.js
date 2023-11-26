@@ -32,3 +32,7 @@ document.getElementById('ships').onclick = function(){
 document.getElementById('clientType').onclick = function(){
     window.location.href = '../clientType/index.html';
 };
+
+document.getElementById('installationsTypes').onclick = function(){
+    window.location.href = '../installationType/index.html';
+};
