@@ -48,3 +48,7 @@ document.getElementById('reparationsTypes').onclick = function(){
 document.getElementById('classification').onclick = function(){
     window.location.href = '../classifications/index.html';
 };
+
+document.getElementById('airPort').onclick = function(){
+    window.location.href = '../airPort/index.html';
+};

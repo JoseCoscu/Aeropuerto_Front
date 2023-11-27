@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="./airportForm/css/style.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idAirPort" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="airPort_form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="username">Posicion Geografica:</label>
+          <input type="text" id="geoPos" name="geoPos" />
+        </div>
+        <div class="form-group">
+          <label for="address">Direccion:</label>
+          <input type="text" id="address" name="address" />
+        </div>
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./airportForm/script/airportForm.js"></script>
+  </body>
+</html>
