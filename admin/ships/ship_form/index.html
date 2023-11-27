@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Avion</title>
+    <link rel="stylesheet" href="./ship_form/css/styles.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idShip" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="ship_form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="status">Estado:</label>
+          <input type="text" id="status" name="status" />
+        </div>
+
+        <div class="form-group">
+          <label for="capacity">Capacidad:</label>
+          <input type="number" id="capacity" name="capacity" />
+        </div>
+
+        <div class="form-group">
+          <label for="crew">Tripulacion:</label>
+          <input type="number" id="crew" name="crew" />
+        </div>
+
+        <div class="form-group">
+          <label for="total_seats">Total de Plazas:</label>
+          <input type="number" id="total_seats" name="total_seats">
+        </div>
+
+        <div class="form-group">
+            <label for="owner">Dueño:</label>
+            <input type="number" id="owner" name="owner">
+        </div>
+
+        <div class="form-group">
+            <label for="classification">Clasificación:</label>
+            <input type="number" id="classification" name="classification">
+        </div>
+
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./ship_form/scripts/ships_form.js"></script>
+  </body>
+</html>

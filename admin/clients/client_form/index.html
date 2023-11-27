@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="./client_form/css/styles.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idClient" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="client_form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="username">Usuario:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="nacionalidad">Nacionalidad:</label>
+          <input type="text" id="nacionalidad" name="nacionalidad" />
+        </div>
+        <div class="form-group">
+          <label for="clienttype">Tipo de Cliente:</label>
+          <select id="clienttype" name="clienttype">
+            <option value="1">Regular</option>
+            <option value="2">Premium</option>
+            <option value="3">VIP</option>
+          </select>
+        </div>
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./client_form/script/client_form.js"></script>
+  </body>
+</html>
