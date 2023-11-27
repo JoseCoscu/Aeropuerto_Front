@@ -36,3 +36,7 @@ document.getElementById('clientType').onclick = function(){
 document.getElementById('installationsTypes').onclick = function(){
     window.location.href = '../installationType/index.html';
 };
+
+document.getElementById('passengerType').onclick = function(){
+    window.location.href = '../passengerType/index.html';
+};
