@@ -40,3 +40,7 @@ document.getElementById('installationsTypes').onclick = function(){
 document.getElementById('passengerType').onclick = function(){
     window.location.href = '../passengerType/index.html';
 };
+
+document.getElementById('reparationsTypes').onclick = function(){
+    window.location.href = '../reparationType/index.html';
+};
