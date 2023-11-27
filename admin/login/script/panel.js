@@ -44,3 +44,7 @@ document.getElementById('passengerType').onclick = function(){
 document.getElementById('reparationsTypes').onclick = function(){
     window.location.href = '../reparationType/index.html';
 };
+
+document.getElementById('classification').onclick = function(){
+    window.location.href = '../classifications/index.html';
+};
