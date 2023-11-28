@@ -35,9 +35,9 @@ const createClient = async (client) => {
     const button_type = document.querySelector('#create-update').value
     const name = document.querySelector('#name').value
     const geoPos = document.querySelector('#geoPos').value
-    const direccion = document.querySelector('#address').value
+    const direction = document.querySelector('#address').value
     
-    const client = { name, geoPos, direccion }
+    const client = {name, geoPos, direction }
     console.log(client)
     const id_client = document.querySelector('#idAirPort').value
     console.log(client)

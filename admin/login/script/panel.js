@@ -52,3 +52,7 @@ document.getElementById('classification').onclick = function(){
 document.getElementById('airPort').onclick = function(){
     window.location.href = '../airPort/index.html';
 };
+
+document.getElementById('installations').onclick = function(){
+    window.location.href = '../installations/index.html';
+};

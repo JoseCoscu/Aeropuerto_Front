@@ -27,7 +27,7 @@ const deletAirPort = async (id) => {
         // Modificas los valores de los campos específicos
         temporal.querySelector('#name').setAttribute('value', client_data['name'])
         temporal.querySelector('#geoPos').setAttribute('value', client_data['geoPos'])
-        temporal.querySelector('#address').setAttribute('value', client_data['address'])
+        temporal.querySelector('#address').setAttribute('value', client_data['direction'])
         temporal.querySelector('#idAirPort').setAttribute('value', id_client)
   
         const contenidoModificado = temporal.innerHTML

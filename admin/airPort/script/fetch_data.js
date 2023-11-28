@@ -7,13 +7,12 @@ const refreshAirports = async (event) => {
   const airports = await get_airports()
   const rows = airports
     .map((airport) => {
-      const { id, name, geoPos, address } = airport
-      console.log(address)
+      const { id, name, geoPos, direction } = airport
       return `<tr>
               <td name = 'id'>${id}</td>
               <td name = 'name'>${name}</td>
               <td name = 'geoPos'>${geoPos}</td>
-              <td name = 'address'>${address}</td>
+              <td name = 'address'>${direction}</td>
               <td><button class = "boton edit_button" value = ${id}>Edit</button>
               <button class = "boton delete_button" value =${id}>Delete</button></td>
             </tr>`
