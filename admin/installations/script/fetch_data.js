@@ -8,12 +8,12 @@ const refreshClientsTypes = async (event) => {
 
   const rows = clientsTypes
     .map((clientType) => {
-      const { id, name,location,idInstallationType,idAirport} = clientType
+      const { id, name,location,idTypeInst,idAirport} = clientType
       return `<tr>
               <td name = 'id'>${id}</td>
               <td name = 'name'>${name}</td>
               <td name = 'location'>${location}</td>
-              <td name = 'idInstallationType'>${idInstallationType}</td>
+              <td name = 'idInstallationType'>${idTypeInst}</td>
               <td name = 'idAirport'>${idAirport}</td>
               <td><button class = "boton edit_button" value = ${id}>Edit</button>
               <button class = "boton delete_button" value =${id}>Delete</button></td>
