@@ -60,3 +60,7 @@ document.getElementById('installations').onclick = function(){
 document.getElementById('passenger').onclick = function(){
     window.location.href = '../passenger/index.html';
 };
+
+document.getElementById('services').onclick = function(){
+    window.location.href = '../service/index.html';
+};

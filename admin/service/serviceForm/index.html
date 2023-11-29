@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Pasajero</title>
+    <link rel="stylesheet" href="./serviceForm/css/style.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idService" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="service_form">
+        <div class="form-group">
+            <label for="description">Descripcion:</label>
+            <input type="text" id="description" name="description" />
+        </div>
+        <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="number" step="0.01" id="price" name="price" />
+          </div>
+          <div class="form-group">
+            <label for="idInstallation">ID Instalacion:</label>
+            <input type="number" id="idInstallation" name="idInstallation" />
+          </div>
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./serviceForm/script/serviceForm.js"></script>
+  </body>
+</html>
