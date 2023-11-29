@@ -14,7 +14,7 @@ document.getElementById('services').onclick = function(){
 };
 
 document.getElementById('reparations').onclick = function(){
-    window.location.href = '../reparaciones/index.html';
+    window.location.href = '../reparations/index.html';
 };
 
 document.getElementById('flys').onclick = function(){

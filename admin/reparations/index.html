@@ -32,31 +32,27 @@
     <div class="pestana" id="pestana">☰</div>
 
     <!-- Contenido principal: Tabla con registros y botones -->
-    <table>
-        <tr>
-            <th>Columna 1</th>
-            <th>Columna 2</th>
-        </tr>
-        <tr>
-            <td>Valor 1A</td>
-            <td>Valor 1B</td>
-        </tr>
-        <tr>
-            <td>Valor 2A</td>
-            <td>Valor 2B</td>
-        </tr>
-        <!-- Agregar más registros según sea necesario -->
-
-        <!-- Botones al final de la tabla -->
-        <tr>
-            <td colspan="2">
-                <button class="botonTabla">Crear Nuevo Registro</button>
-                <button class="botonTabla">Editar Registro</button>
-            </td>
-        </tr>
-    </table>
+    <table id="reparations_table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Descripcion</th>
+            <th>Precio/h</th>
+            <th>ID Tipo de Reparacion</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div style="display: flex; justify-content: center">
+        <button class="botonTabla" id="create_reparation">Crear Nuevo Registro</button>
+        <button id="refresh" class="botonTabla">Actualizar</button>
+      </div>
 
     <!-- JavaScript para controlar la visibilidad del panel -->
     <script src="../login/script/panel.js"></script>
+    <script src="script/fetch_data.js"></script>
+    <script src="script/reparations.js"></script>
+    <script src="reparationsForm/script/wizard.js"></script>
 </body>
 </html>
