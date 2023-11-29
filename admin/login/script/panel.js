@@ -56,3 +56,7 @@ document.getElementById('airPort').onclick = function(){
 document.getElementById('installations').onclick = function(){
     window.location.href = '../installations/index.html';
 };
+
+document.getElementById('passenger').onclick = function(){
+    window.location.href = '../passenger/index.html';
+};
