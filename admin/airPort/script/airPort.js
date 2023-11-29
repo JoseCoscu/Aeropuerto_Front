@@ -1,5 +1,5 @@
 const deletAirPort = async (id) => {
-    const response = fetch(`http://localhost:1234/airport/${id}`, {
+    const response = await fetch(`http://localhost:1234/airport/${id}`, {
       method: 'DELETE'
     })
     return response.ok
