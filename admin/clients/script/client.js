@@ -136,3 +136,26 @@ function buscarClientes() {
   )
   updateCtable(resultados)
 }
+
+
+function exportClients() {
+  const clientes = clientsFromTable()
+
+  const data = clientes.map(cliente => ({
+    ID: cliente.id,
+    'Tipo de cliente': cliente.clientType,
+    Nombre: cliente.name,
+    'Nombre de usuario': cliente.username,
+    Nacionalidad: cliente.nacionalidad
+    // Agrega más propiedades según los atributos de tus clientes
+  }));
+
+  const ws = XLSX.utils.json_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Clientes');
+
+  XLSX.writeFile(wb, 'clientes.xlsx');
+}
+
+const exportButton = document.getElementById('exportButton');
+exportButton.addEventListener('click', exportClients);
