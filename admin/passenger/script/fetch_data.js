@@ -3,19 +3,22 @@ const token =
 const table = document.querySelector('#passenger_table tbody')
 const refresh_button = document.querySelector('#refresh')
 
-const refreshClientsTypes = async (event) => {
-  const clientsTypes = await get_passengers()
+const refreshPassengers = async (event) => {
+  const passengers = await get_passengers()
 
-  const rows = clientsTypes
-    .map((clientType) => {
-      const { ship, date,idClient,idPassengerType} = clientType
+  const rows = passengers
+    .map((passengers) => {
+      const { ship, date, idClient, idPassengerType } = passengers
+      const id = { ship, date, idClient }
+      const _datef = date.substring(0, 10)
+      const _id = JSON.stringify(id)
       return `<tr>
               <td name = 'ship'>${ship}</td>
-              <td name = 'date'>${date}</td>
+              <td name = 'date'>${_datef}</td>
               <td name = 'idClient'>${idClient}</td>
               <td name = 'idClientType'>${idPassengerType}</td>
-              <td><button class = "boton edit_button" value = ${ship,date,idClient}>Edit</button>
-              <button class = "boton delete_button" value =${ship,date,idClient}>Delete</button></td>
+              <td><button class = "boton edit_button" value = ${_id}>Edit</button>
+              <button class = "boton delete_button" value = ${_id}>Delete</button></td>
               
             </tr>`
     })
@@ -23,8 +26,8 @@ const refreshClientsTypes = async (event) => {
   table.innerHTML = rows
 }
 
-window.addEventListener('DOMContentLoaded', refreshClientsTypes)
-refresh_button.addEventListener('click', refreshClientsTypes)
+window.addEventListener('DOMContentLoaded', refreshPassengers)
+refresh_button.addEventListener('click', refreshPassengers)
 
 const get_passengers = async () => {
   try {
@@ -35,8 +38,8 @@ const get_passengers = async () => {
         'Content-Type': 'application/json'
       }
     })
-    const clientsTypes = await result.json()
-    return clientsTypes
+    const passengers = await result.json()
+    return passengers
   } catch (error) {
     console.error(error)
   }
