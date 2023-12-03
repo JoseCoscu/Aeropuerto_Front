@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flights</title>
-    <link rel="stylesheet" href="./login/css/styles.css">
-</head>
-<body>
-
-    <!-- Panel con botones -->
-    <div class="panel" id="panel">
-        <button class="boton" id = "services">Servicios</button>
-        <button class="boton" id = "reparations">Reparaciones</button>
-        <button class="boton" id = "clients">Clientes</button>
-        <button class="boton" id = "flys">Vuelos</button>
-        <button class="boton" id="ships">Aviones</button>
-
-    </div>
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body>
+    <div id="menu-container"></div>
     <div class="pestana" id="pestana">☰</div>
-    <table id="flights_table">
-        <!-- Botones al final de la tabla -->
-        <tr>
-            <td colspan="2">
-                <button class="botonTabla">Crear Nuevo Registro</button>
-                <button class="botonTabla">Editar Registro</button>
-            </td>
-        </tr>
-    </table>
 
-    <!-- JavaScript para controlar la visibilidad del panel -->
-    <script src="./login/script/panel.js"></script>
-</body>
+    <script src="./script/admin.js"></script>
+  </body>
 </html>
