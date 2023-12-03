@@ -83,3 +83,115 @@ th {
 .botonTabla:hover {
   background-color: #127317c8;
 }
+
+.search_bar {
+  background-color: rgba(0, 0, 0, 0.3); /* Color de fondo semitransparente */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px; /* Espaciado interno */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave de color */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.search_bar:focus, /* Cuando se le da foco */
+.search_bar:hover { /* Cuando se pasa el cursor */
+  background-color: white; /* Cambia a fondo blanco */
+  color: black; /* Cambia el color del texto a negro */
+  outline: none; /* Quita el contorno al hacer clic */
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px; /* Bordes redondeados */
+  border: none; /* Borde del dropdown */
+  padding: 5px;
+  width: 200px; /* Ancho del dropdown */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content:focus, /* Cuando se le da foco */
+.dropdown-content:hover { /* Cuando se pasa el cursor */
+  background-color: white; /* Cambia a fondo blanco */
+  color: black; /* Cambia el color del texto a negro */
+  outline: none; /* Quita el contorno al hacer clic */
+}
+
+.dropdown-content.show {
+  display: block;
+  animation: dropdownAnimation 0.3s ease-in-out forwards; /* Animación del despliegue */
+}
+
+.dropdown-content.hide {
+  animation: hideDropdownAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes dropdownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Despliegue normal */
+  }
+}
+
+/* Animación de ocultar */
+@keyframes hideDropdownAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+    display: none; /* Oculta completamente al final de la animación */
+  }
+}
+
+
+.custom-checkbox {
+  display: none; /* Oculta la casilla de verificación */
+}
+
+.checkbox-label {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + .checkbox-label {
+  background-color: #a7d129; /* Cambia el color cuando está seleccionado */
+  color: white; /* Cambia el color del texto cuando está seleccionado */
+}
+
+
+.searchButton {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.searchButton:hover {
+  background-color: white;
+  color: black;
+  outline: none;
+}

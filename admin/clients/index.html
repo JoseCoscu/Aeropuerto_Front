@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="../login/css/styles.css" />
   </head>
   <body>
-    <!-- Panel con botones -->
+    <div class="dropdown">
+      <input type="text" id="searchInput" class="search_bar" placeholder="Buscar cliente...">
+      <button id="searchButton" class="searchButton">Buscar</button>
+      <div class="dropdown-content" id="dropdownContent">Filtrar por:<br/>
+        <input type="checkbox" id="cType" class="custom-checkbox">
+        <label for="cType" class="checkbox-label">Tipo Cliente</label><br/>
+        <input type="checkbox" id="nationality" class="custom-checkbox">
+        <label for="nationality" class="checkbox-label">Nacionalidad</label><br/>
+      </div>
+    </div>
+    
     <div class="panel" id="panel">
       <button class="boton" id="airPort">Aeropuerto</button>
       <button class="boton" id="classification">Clasificacion Avion</button>
@@ -34,11 +44,12 @@
     <table id="clients_table">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Client Type</th>
-          <th>Name</th>
-          <th>User Name</th>
-          <th>Nationality</th>
+          <th onclick="sortBy(0)">ID</th>
+          <th onclick="sortBy(1)">Client Type</th>
+          <th onclick="sortBy(2)">Name</th>
+          <th onclick="sortBy(3)">User Name</th>
+          <th onclick="sortBy(4)">Nationality</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -46,6 +57,7 @@
     <div style="display: flex; justify-content: center">
       <button class="botonTabla" id="create_client">Crear Nuevo Registro</button>
       <button id="refresh" class="botonTabla">Actualizar</button>
+      <button id="exportButton" class="botonTabla">Exportar a Excel</button>
     </div>
 
     <!-- JavaScript para controlar la visibilidad del panel -->

@@ -46,3 +46,93 @@ table_clients.addEventListener('click', async (event) => {
     }
   }
 })
+
+
+function  clientsFromTable() {
+  const clients = [];
+  const ctable = document.getElementById('clients_table');
+  const rows = ctable.getElementsByTagName('tr');
+
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i];
+    const cells = row.getElementsByTagName('td');
+    
+   
+      const cliente = {
+        id: cells[0].innerText,
+        clientType: cells[1].innerText,
+        nombre: cells[2].innerText,
+        username: cells[3].innerText,
+        nationality: cells[4].innerText
+       
+      };
+      
+      clients.push(cliente);
+    
+  }
+  
+  return clients;
+}
+
+function sortBy(columnIndex) {
+  const clientes = clientsFromTable();
+
+  clientes.sort((a, b) => {
+    const valueA = Object.values(a)[columnIndex];
+    const valueB = Object.values(b)[columnIndex];
+
+    if (typeof valueA === 'string' && typeof valueB === 'string') {
+      return valueA.localeCompare(valueB);
+    } else {
+      return valueA - valueB;
+    }
+  });
+
+updateCtable(clientes)
+}
+
+
+function updateCtable(clientes) {
+  const tableBody = document.getElementById('clients_table').getElementsByTagName('tbody')[0]
+  tableBody.innerHTML = ''
+
+  clientes.forEach(cliente => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td name='id'>${cliente.id}</td>
+      <td name = 'idClientType'>${cliente.clientType}</td>
+      <td name = 'name'>${cliente.nombre}</td>
+      <td name = 'username'>${cliente.username}</td>
+      <td name = 'nationality'>${cliente.nationality}</td>
+      <td>
+        <button class = "boton edit_button" value = ${cliente.id}>Edit</button>
+        <button class = "boton delete_button" value =${cliente.id}>Delete</button>
+      </td>
+    `
+    tableBody.appendChild(row);
+  });
+}
+
+
+const searchInput = document.getElementById('searchInput');
+const dropdownContent = document.getElementById('dropdownContent');
+
+
+searchInput.addEventListener('click', function() {
+  dropdownContent.classList.toggle('show');
+
+});
+
+const searchButton = document.getElementById('searchButton');
+
+searchButton.addEventListener('click', buscarClientes)
+
+function buscarClientes() {
+  clientes=clientsFromTable()
+  const searchTerm = searchInput.value.toLowerCase();
+  
+  const resultados = clientes.filter(cliente =>
+    cliente.nombre.toLowerCase().includes(searchTerm) || cliente.username.toLowerCase().includes(searchTerm)
+  )
+  updateCtable(resultados)
+}
