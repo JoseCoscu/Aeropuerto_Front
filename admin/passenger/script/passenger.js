@@ -1,6 +1,6 @@
 const deletPassenger = async (id) => {
   const response = await fetch(
-    `http://localhost:1234/passenger/?shipOld=${id.ship}&dateOld=${id.date}&idClientOld=${id.idClient}`,
+    `http://localhost:1234/passenger/?shipOld=${id.ship}&dateOld=${(new Date(id.date)).toISOString()}&idClientOld=${id.idClient}`,
     {
       method: 'DELETE'
     }

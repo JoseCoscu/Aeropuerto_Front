@@ -37,11 +37,11 @@ passenger_form.addEventListener('submit', async (event) => {
   event.preventDefault()
   const button_type = document.querySelector('#create-update').value
   const ship = document.querySelector('#ship').value
-  const date = document.querySelector('#date').value
+  const date = new Date(document.querySelector('#date').value).toISOString()
   const idClient = document.querySelector('#idClient').value
   const idPassengerType = document.querySelector('#idClientType').value
   const passenger = { ship, date, idClient, idPassengerType }
-  const id_passenger = JSON.parse(document.querySelector('#idPassenger').value)
+  
 
   if (button_type === 'Create') {
     const response = await createPassenger(passenger)
@@ -50,6 +50,7 @@ passenger_form.addEventListener('submit', async (event) => {
     }
   }
   if (button_type === 'Edit') {
+    const id_passenger = JSON.parse(document.querySelector('#idPassenger').value)
     const id = JSON.parse(id_passenger)
     const response = await updatePassenger(passenger, id)
     if (response === true) {
