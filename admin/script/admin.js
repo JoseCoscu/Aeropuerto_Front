@@ -1,6 +1,6 @@
 let menu
 document.addEventListener('DOMContentLoaded', async function () {
-  const result = await fetch('../menu.html')
+  const result = await fetch('/admin/menu.html')
   const data = await result.text()
   document.querySelector('#menu-container').innerHTML = data
   menu = document.querySelector('.menu')

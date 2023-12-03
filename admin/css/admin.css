@@ -1,6 +1,6 @@
 /* Estilos para el panel y los botones */
 body {
-  background-image: url('/images/main_image.png');
+  background-image: url('/admin/images/main_image.png');
   background-size: contain 100% 100%;
   background-repeat: repeat;
 }
