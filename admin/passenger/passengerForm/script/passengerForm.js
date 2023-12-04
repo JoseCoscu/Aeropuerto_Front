@@ -41,6 +41,7 @@ passenger_form.addEventListener('submit', async (event) => {
   const idClient = document.querySelector('#idClient').value
   const idPassengerType = document.querySelector('#idClientType').value
   const passenger = { ship, date, idClient, idPassengerType }
+  console.log(passenger)
   
 
   if (button_type === 'Create') {

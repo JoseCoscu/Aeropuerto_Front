@@ -7,12 +7,13 @@ const refreshClients = async (event) => {
   const clients = await get_client()
   const rows = clients
     .map((client) => {
-      const { id, description, priceHour, idReparationType } = client
+      const { id, description, priceHour, idReparationType,idInstalation } = client
       return `<tr>
               <td name = 'id'>${id}</td>
               <td name = 'description'>${description}</td>
               <td name = 'priceHour'>${priceHour}</td>
               <td name = 'idReparationType'>${idReparationType}</td>
+              <td name = 'idInstallation'>${idInstalation}</td>
               <td>
               <button class = "boton edit_button" value = ${id}>Edit</button>
               <button class = "boton delete_button" value =${id}>Delete</button>

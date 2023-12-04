@@ -28,6 +28,7 @@ const deletClient = async (id) => {
         temporal.querySelector('#description').setAttribute('value', client_data['description'])
         temporal.querySelector('#price').setAttribute('value', client_data['priceHour'])
         temporal.querySelector('#idReparationType').setAttribute('value', client_data['idReparationType'])
+        temporal.querySelector('#idInstallation').setAttribute('value', client_data['idInstallation'])
         temporal.querySelector('#create-update').setAttribute('value', 'Edit')
         temporal.querySelector('#idReparation').setAttribute('value', id_client)
   
