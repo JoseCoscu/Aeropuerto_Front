@@ -1,4 +1,4 @@
-  const table_clients = document.querySelector('#service_table')
+  const table_clients = document.querySelector('#services_table')
   table_clients.addEventListener('click', async (event) => {
     if (event.target.type === 'submit') {
       const button = event.target
@@ -11,25 +11,35 @@
           const value = x.textContent
           if (attr !== null) client_data[attr] = value
         })
-        const ventanaPopup = window.open('', 'Formulario Servicio', 'width=500,height=800')
-        const content = await getContent('./serviceForm/index.html')
-  
-        const temporal = document.createElement('div')
-        temporal.innerHTML = content
-        console.log(client_data)
-        // Modificas los valores de los campos específicos
-        temporal.querySelector('#description').setAttribute('value', client_data['description'])
-        temporal.querySelector('#price').setAttribute('value', client_data['price'])
-        temporal.querySelector('#idInstallation').setAttribute('value', client_data['idInstalation'])
-        temporal.querySelector('#create-update').setAttribute('value', 'Edit')
-        temporal.querySelector('#idService').setAttribute('value', id_client)
-  
-        const contenidoModificado = temporal.innerHTML
-  
-        // Escribir el contenido en la nueva ventana emergente
-        ventanaPopup.document.write(contenidoModificado)
-      }
       
+      const service = client_data['id']
+      const date = new Date().toISOString()
+      const client = client_id
+      const valuation = null
+      const Cservice = { service, date, client, valuation }
+      console.log(Cservice)
+      createCservice(Cservice)
+      }
     }
   })
-  
+const client_id="1"
+
+
+
+
+const createCservice = async (Cservice) => {
+  try {
+    const response = await fetch('http://localhost:1234/contractService', {
+      method: 'POST',
+      body: JSON.stringify(Cservice),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    return response.ok
+  } catch (err) {
+    console.log(err)
+    return false
+  }
+}
+
