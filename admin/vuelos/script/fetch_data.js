@@ -7,11 +7,17 @@ window.addEventListener('DOMContentLoaded',async (event)=>{
   
   const rows = flights.map(flight => {
     const {ship, date, airport, plannedDate} = flight 
+    const id = { ship, date }
+    const _datef = date.substring(0, 10)
+    const _dateS = plannedDate.substring(0, 10)
+    const _id = JSON.stringify(id)
     return `<tr>
               <td>${ship}</td>
-              <td>${date}</td>
+              <td>${_datef}</td>
               <td>${airport}</td>
-              <td>${plannedDate}</td>
+              <td>${_dateS}</td>
+              <td><button class = "boton edit_button" value = ${_id}>Edit</button>
+              <button class = "boton delete_button" value = ${_id}>Delete</button></td>
             </tr>`
   }).join('')
   table.innerHTML = rows;

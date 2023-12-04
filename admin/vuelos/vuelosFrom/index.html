@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="./vuelosFrom/css/style.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idCSevice" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="flightForm">
+        <div class="form-group">
+            <label for="idShip">ID Avion:</label>
+            <input type="number" id="idShip" name="idShip" />
+        </div>
+        <div class="form-group">
+            <label for="date">Fecha Llegada:</label>
+            <input type="date" id="date" name="date" />
+        <div class="form-group">
+            <label for="plannedDate">Fecha Salida:</label>
+            <input type="date" id="plannedDate" name="plannedDate" />
+        </div>
+        <div class="form-group">
+            <label for="idAirport">ID Aeropuerto:</label>
+            <input type="number" id="idAirport" name="idAirport" />
+        </div>
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./vuelosFrom/script/vuelosFrom.js"></script>
+  </body>
+</html>
