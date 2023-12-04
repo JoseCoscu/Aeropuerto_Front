@@ -37,7 +37,8 @@ const createClientType = async (clientType) => {
     const description = document.querySelector('#description').value
     const priceHour = document.querySelector('#price').value
     const idReparationType = document.querySelector('#idReparationType').value
-    const clientType = {description,priceHour,idReparationType}
+    const idInstalation = document.querySelector('#idInstallation').value
+    const clientType = {description,priceHour,idReparationType,idInstalation}
     const id_passenger = document.querySelector('#idReparation').value
     console.log(clientType)
     
