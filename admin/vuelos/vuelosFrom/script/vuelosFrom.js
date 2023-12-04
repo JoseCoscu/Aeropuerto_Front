@@ -16,7 +16,7 @@ const createCservice = async (Cservice) => {
   const updateCservice = async (Cservice, id) => {
     try {
       const response = await fetch(
-        `http://localhost:1234/flight/?service=${id.service}&date=${id.date}&client=${id.client}`,
+        `http://localhost:1234/flight/?ship=${id.ship}&date=${id.date}`,
         {
           method: 'PUT',
           body: JSON.stringify(Cservice),
@@ -52,7 +52,7 @@ const createCservice = async (Cservice) => {
       }
     }
     if (button_type === 'Edit') {
-      const id_Cservice = JSON.parse(document.querySelector('#idCSevice').value)
+      const id_Cservice = JSON.parse(document.querySelector('#idFlight').value)
       const id = JSON.parse(id_Cservice)
       const response = await updateCservice(Cservice, id)
       if (response === true) {
