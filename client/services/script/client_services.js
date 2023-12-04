@@ -17,12 +17,12 @@
       const client = client_id
       const valuation = null
       const Cservice = { service, date, client, valuation }
-      console.log(Cservice)
+      console.log(client)
       createCservice(Cservice)
       }
     }
   })
-const client_id="1"
+const client_id="32"
 
 
 

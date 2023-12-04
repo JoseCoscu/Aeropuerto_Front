@@ -10,6 +10,9 @@ pestana.addEventListener('click', () => {
 });
 
 document.getElementById('services').onclick = function(){
-    window.location.href = './services/index.html';
+    window.location.href = 'index.html';
 };
 
+document.getElementById('hiredServices').onclick = function(){
+    window.location.href = 'hiredServices/index.html';
+};
