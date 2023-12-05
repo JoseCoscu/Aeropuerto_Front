@@ -17,7 +17,7 @@ const createCservice = async (Cservice) => {
   const updateCservice = async (Cservice, id) => {
     try {
       const response = await fetch(
-        `http://localhost:1234/implication/?service=${id.service}&date=${id.date}&client=${id.client}`,
+        `http://localhost:1234/implication/?ship1Old=${id.ship1}&startDate1Old=${id.startDate1}&ship2Old=${id.ship2}&startDate2Old=${id.startDate2}`,
         {
           method: 'PUT',
           body: JSON.stringify(Cservice),
@@ -43,7 +43,7 @@ const createCservice = async (Cservice) => {
     const ship1 = document.querySelector('#idShip1').value
     const startDate1 = new Date(document.querySelector('#date1').value).toISOString()
     const ship2 = document.querySelector('#idShip2').value
-    const startDate2 = document.querySelector('#date2').value
+    const startDate2 = new Date( document.querySelector('#date2').value).toISOString()
 
     const Cservice = { ship1, startDate1, ship2, startDate2 }
     
