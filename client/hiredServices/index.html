@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Contratados</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- Panel con botones -->
+    <div class="panel" id="panel">
+        <button class="boton" id = "services">Servicios</button>
+        <button class="boton" id = "hiredServices">Servicios Contratados</button>
+    </div>
+    <div id="menu-container"></div>
+    <div class="pestana" id="pestana">☰</div>
+    <table id="cService_table">
+      <thead>
+        <tr>
+          <th>Service ID</th>
+          <th>ID Cliente</th>
+          <th>Fecha</th>
+          <th>Valoracion</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="dropdown" id="dropdown">
+      <div class="dropdown-content" id="dropdownContent">
+        <input type="number" id="inputValue" min="1" max="10">
+        <button onclick="submitValue()">Enviar</button>
+      </div>
+    </div>
+    
+
+
+    <!-- JavaScript para controlar la visibilidad del panel -->
+    <script src="../script/panel.js"></script>
+    <script src="script/fetch_data.js"></script>
+    <script src="script/hiredServices.js"></script>
+</body>
+</html>

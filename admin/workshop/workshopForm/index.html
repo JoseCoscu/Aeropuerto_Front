@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Cliente</title>
+    <link rel="stylesheet" href="./workshopForm/css/style.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idCSevice" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="wsReparationForm">
+        <div class="form-group">
+            <label for="name">ID Avion:</label>
+            <input type="number" id="idShip" name="idShip" />
+        </div>
+        
+        <div class="form-group">
+            <label for="startDate">Fecha de Inicio:</label>
+            <input type="date" id="startDate" name="startDate" />
+        <div class="form-group">
+        
+        <div class="form-group">
+            <label for="endDate">Fecha de Final:</label>
+            <input type="date" id="endDate" name="endDate" />
+        <div class="form-group">
+            <label for="name">ID Reparacion:</label>
+            <input type="number" id="idReparation" name="idShip" />
+        </div>
+        <div class="form-group">
+            <label for="time">Tiempo(h):</label>
+            <input type="number" id="time" name="time" />
+        </div>
+
+        <div class="form-group">
+            <label for="increment">Incremento:</label>
+            <input type="number" step="0.01" id="increment" name="increment" />
+        </div>
+        <div class="form-group">
+            <label for="discount">Descuento:</label>
+            <input type="number" step="0.01" id="discount" name="discount" />
+        </div>
+
+        <div class="form-group">
+            <label for="status">Estado:</label>
+            <input type="text" id="status" name="status" />
+        </div>
+
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./workshopForm/script/workshopForm.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario Reparaciones</title>
+    <link rel="stylesheet" href="./reparationsForm/css/style.css" />
+  </head>
+  <body>
+    <input type="hidden" id="idReparation" value="" />
+    <div class="container">
+      <h1>Formulario</h1>
+      <form id="reparation_form">
+        <div class="form-group">
+            <label for="description">Descripcion:</label>
+            <input type="text" id="description" name="description" />
+        </div>
+        <div class="form-group">
+            <label for="price">Precio por Hora:</label>
+            <input type="number" step="0.01" id="price" name="price" />
+          </div>
+          <div class="form-group">
+            <label for="idReparationType">ID Tipo de Reparacion:</label>
+            <input type="number" id="idReparationType" name="idReparationType" />
+          </div>
+          <div class="form-group">
+            <label for="idInstallation">ID Instalacion:</label>
+            <input type="number" id="idInstallation" name="idInstallation" />
+          </div>
+        <input id="create-update" type="submit" value="Create" />
+      </form>
+    </div>
+    <script src="./reparationsForm/script/reparationsForm.js"></script>
+  </body>
+</html>

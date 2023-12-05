@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/admin/css/admin.css" />
+    <link rel="stylesheet" href="/admin/css/menu.css" />
+  </head>
+  <body>
+    <div id="menu-container"></div>
+
+    <ul>
+        <li class="menu-item" ><a class = "e" href="#" data-action="NamesLocationsOfRepairServiceAirports">Aeropuerto con Servicios de Reparacion</a></li>
+        <li class="menu-item" ><a class = "e" href="#" data-action="TotalCapitalRepairsPerAirport">Cantidad de Reparaciones Capitales por Aeropuerto</a></li>
+    </ul>
+   
+
+    <select name="select" id="format">
+        <option value="pdf">PDF</option>
+        <option value="xlsx" selected>Excel</option>
+      </select>
+
+    <div class="pestana" id="pestana">☰</div>
+
+    <script src="/admin/script/admin.js"></script>
+    <script src="script/report.js"></script>
+  </body>
+</html>
