@@ -35,13 +35,12 @@ const refreshPassengers = async (event) => {
       const _id = JSON.stringify(id)
       return `<tr>
               <td name = 'service'>${service}</td>
-              <td name = 'idClient'>${client}</td>
+              <td name = 'client'>${client}</td>
               <td name = 'date'>${_datef}</td>
               <td name = 'valuation'>${valuation}</td>
-              <td><button class = "boton edit_button" value = ${_id}>Edit</button>
-              <button class = "boton delete_button" value = ${_id}>Delete</button></td>
-              
+              <td><button id='rate' name = 'rateBtn' onclick="toggleDropdown()" class="dropbtn" value = ${_id}>Edit</button>
             </tr>`
+
       }
       
     })
@@ -50,6 +49,5 @@ const refreshPassengers = async (event) => {
 }
 
 window.addEventListener('DOMContentLoaded', refreshPassengers)
-refresh_button.addEventListener('click', refreshPassengers)
 
 
