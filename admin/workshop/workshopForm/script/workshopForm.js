@@ -16,7 +16,7 @@ const createCservice = async (workshop) => {
   const updateCservice = async (workshop, id) => {
     try {
       const response = await fetch(
-        `http://localhost:1234/workshop/?service=${id.service}&date=${id.date}&client=${id.client}`,
+        `http://localhost:1234/workshop/?ship=${id.ship}&startDate=${id.startDate}`,
         {
           method: 'PUT',
           body: JSON.stringify(workshop),

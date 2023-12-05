@@ -14,7 +14,7 @@ const refreshPassengers = async (event) => {
       const _dateF = finalDate.substring(0, 10)
       const _id = JSON.stringify(id)
       return `<tr>
-              <td name = 'service'>${ship}</td>
+              <td name = 'ship'>${ship}</td>
               <td name = 'starDate'>${_dateS}</td>
               <td name = 'endDate'>${_dateF}</td>
               <td name = 'idReparation'>${idReparation}</td>
