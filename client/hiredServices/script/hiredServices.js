@@ -1,29 +1,44 @@
 let dropdownVisible = false;
 
-function toggleDropdown() {
+const tableaaa=document.querySelector('#cService_table')
+
+tableaaa.addEventListener('click',async(event)=>{
+  if (event.target.type==='submit'){
+    const button=event.target
+    if(button.classList.contains('rate')){
+      id=JSON.parse(button.value)
+
+      const row = Array.from(button.closest('tr').cells)
+      const reparation_data = {}
+      row.forEach((x) => {
+        const attr = x.getAttribute('name')
+        const value = x.textContent
+        if (attr !== null) reparation_data[attr] = value
+      })
+      
+      reparation_data['date']=new Date(reparation_data['date']).toISOString()
+      const data = JSON.stringify(reparation_data)
+      toggleDropdown(id,data)
+    }
+  }
+})
+
+function toggleDropdown(id,data) {
   const dropdownContent = document.getElementById('dropdownContent');
+  dropdownContent.setAttribute('value',JSON.stringify(id))
+  dropdownContent.setAttribute('data',data)
+
   dropdownVisible = !dropdownVisible;
   dropdownContent.style.display = dropdownVisible ? 'block' : 'none';
 }
 
 function  submitValue() {
   const value = document.getElementById('inputValue').value;
+  const id =  JSON.parse(document.getElementById('dropdownContent').getAttribute("value"))
+  const reparation_data = JSON.parse(document.getElementById('dropdownContent').getAttribute("data"))
+  reparation_data['valuation']=value
   if (value >= 1 && value <= 10) {
-    // Aquí puedes usar 'value' para lo que necesites, por ejemplo, enviarlo al servidor.
-    const ratebtnValue = JSON.parse( document.querySelector('#rate').value)
-    const buton = document.querySelector('#rate')
-    
-    const row = Array.from(buton.closest('tr').cells)
-    const reparation_data = {}
-    row.forEach((x) => {
-      const attr = x.getAttribute('name')
-      const value = x.textContent
-      if (attr !== null) reparation_data[attr] = value
-    })
-    reparation_data['valuation']=value
-    reparation_data['date']=new Date(reparation_data['date']).toISOString()
-
-    updateCservice(reparation_data,ratebtnValue)
+    updateCservice(reparation_data,id)
     toggleDropdown();
 
   } else {

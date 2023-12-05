@@ -22,7 +22,7 @@
       }
     }
   })
-const client_id="1"
+  const client_id=localStorage.getItem('client_id')
 
 
 

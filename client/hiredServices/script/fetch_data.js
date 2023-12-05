@@ -18,7 +18,7 @@ const get_passengers = async () => {
     }
   }
 
-const client_id="1"
+const client_id=localStorage.getItem('client_id')
 
 const refreshPassengers = async (event) => {
   const passengers = await get_passengers()
@@ -38,7 +38,7 @@ const refreshPassengers = async (event) => {
               <td name = 'client'>${client}</td>
               <td name = 'date'>${_datef}</td>
               <td name = 'valuation'>${valuation}</td>
-              <td><button id='rate' name = 'rateBtn' onclick="toggleDropdown()" class="dropbtn" value = ${_id}>Edit</button>
+              <td><button  name = 'rateBtn'  class="dropbtn rate" value = ${_id}>Edit</button>
             </tr>`
 
       }
