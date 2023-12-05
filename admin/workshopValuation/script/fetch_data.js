@@ -14,8 +14,8 @@ const refreshPassengers = async (event) => {
       const _id = JSON.stringify(id)
       return `<tr>
               <td name = 'ship'>${ship}</td>
-              <td name = 'starDate'>${_dateS}</td>
-              <td name = 'endDate'>${valuation}</td>
+              <td name = 'date'>${_dateS}</td>
+              <td name = 'valuation'>${valuation}</td>
               <td><button class = "boton edit_button" value = ${_id}>Edit</button>
               <button class = "boton delete_button" value = ${_id}>Delete</button></td>
             </tr>`
